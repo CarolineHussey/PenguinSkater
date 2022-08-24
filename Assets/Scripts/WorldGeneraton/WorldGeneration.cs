@@ -65,7 +65,7 @@ public class WorldGeneration : MonoBehaviour
         int randomIndex = Random.Range(0, chunkPrefab.Count);
 
         //does it exits in our current pool? if yes - use it
-        Chunk chunk = null; //set this to null for testing purposes - update later
+        Chunk chunk = chunkPool.Find(x => !x.gameObject.activeSelf && x.name == (chunkPrefab[randomIndex].name + "(Clone)"));
 
         //if it does not already exits in our pool, then create one.
         if(!chunk)

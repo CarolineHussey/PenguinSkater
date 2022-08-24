@@ -1,0 +1,2 @@
+public class SceneChunkGeneration : WorldGeneration { }
+
