@@ -25,20 +25,20 @@
                 },
                 {
                     "name": "StartDrag",
-                    "type": "Button",
+                    "type": "PassThrough",
                     "id": "6fe46fb8-501e-48ce-8e8c-0a3b9e9257e3",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
                     "initialStateCheck": false
                 },
                 {
                     "name": "EndDrag",
-                    "type": "Button",
+                    "type": "PassThrough",
                     "id": "055df4b9-f531-486d-9a27-1e25f2f1da79",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press(behavior=1)",
                     "initialStateCheck": false
                 }
             ],
@@ -57,7 +57,7 @@
                 {
                     "name": "",
                     "id": "65fbd364-0f1b-4ac0-bb66-b3940c0b7bd9",
-                    "path": "<Touchscreen>/touch0/tap",
+                    "path": "<Touchscreen>/touch*/tap",
                     "interactions": "",
                     "processors": "",
                     "groups": "Mobile",
@@ -90,10 +90,21 @@
                 {
                     "name": "",
                     "id": "cc5b8ee5-d71d-4678-9c97-70ee1ef76a25",
-                    "path": "",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "ComputerControls",
+                    "action": "StartDrag",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f8d4d4f6-b417-4038-96de-ec1d509818dc",
+                    "path": "<Touchscreen>/touch*/Press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mobile",
                     "action": "StartDrag",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -101,10 +112,21 @@
                 {
                     "name": "",
                     "id": "8c25b7d5-c1bd-49e7-8303-f7887978ec55",
-                    "path": "",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "ComputerControls",
+                    "action": "EndDrag",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "08fed17c-24cf-4798-a2bd-824eced89e85",
+                    "path": "<Touchscreen>/touch*/Press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mobile",
                     "action": "EndDrag",
                     "isComposite": false,
                     "isPartOfComposite": false
