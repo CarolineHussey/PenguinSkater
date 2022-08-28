@@ -14,10 +14,14 @@ public class PlayerMotor : MonoBehaviour
     public float terminalVelocity = 20.0f;
 
     public CharacterController controller;
+    private BaseState state;
 
     private void Start()
     {
         controller = GetComponent<CharacterController>();
+        state = GetComponent<RunningState>();
+        state.Construct();
+
     }
     private void Update()
     {
@@ -29,13 +33,25 @@ public class PlayerMotor : MonoBehaviour
         isGrounded = controller.isGrounded;
 
         //How should we be moving based on the state
-        //tbc
+        moveVector = state.ProcessMotion();
 
         //are we trying to change state
-        //tbc
+        state.Transition();
 
         //Move the player
         controller.Move(moveVector * Time.deltaTime);
 
+    }
+
+    public void ChangeLane(int direction)
+    {
+        currentLane = Mathf.Clamp(currentLane + direction, -1, 1);
+    }
+
+    public void ChangeState(BaseState s)
+    {
+        state.Destruct();
+        state = s;
+        state.Construct();
     }
 }
