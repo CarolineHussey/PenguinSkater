@@ -44,10 +44,31 @@ public class PlayerMotor : MonoBehaviour
         controller.Move(moveVector * Time.deltaTime);
 
     }
+    public float SnapToLane()
+    {
+        float r = 0.0f; //the return value
 
+        //if we are not directly on top of a lane, move, else, don't!
+        if(transform.position.x != (currentLane * distanceInBetweenLanes)) // if we are not where we should be
+        {
+            float deltaToDesiredPosition = (currentLane * distanceInBetweenLanes) - transform.position.x; //how far do we need to go to get to where we should be
+            r = (deltaToDesiredPosition > 0) ? 1 : -1; //if that distance is >0 then r = 1, otherwise if it is <0 then r = -1
+            r *= baseSidewaySpeed; //this will be -10 or +10 depending on the r value above.  
+
+            float actualDistance = r * Time.deltaTime;
+            if(Mathf.Abs(actualDistance) > Mathf.Abs(deltaToDesiredPosition)) //if actual distance is further than desired distance then clamp it down
+                r = deltaToDesiredPosition * (1/Time.deltaTime); //then multiply deltaToDesiredPosition by 1/Time.deltaTime
+
+        }
+        else //do nothing
+        {
+            r = 0;
+        }
+        return r; 
+    }
     public void ChangeLane(int direction)
     {
-        currentLane = Mathf.Clamp(currentLane + direction, -1, 1);
+        currentLane = Mathf.Clamp(currentLane + direction, -1, 1); //clamp on both left (-1) and right (1)
     }
 
     public void ChangeState(BaseState s)
@@ -55,5 +76,12 @@ public class PlayerMotor : MonoBehaviour
         state.Destruct();
         state = s;
         state.Construct();
+    }
+
+    public void ApplyGravity()
+    {
+        verticalVelocity -= gravity * Time.deltaTime;
+        if(verticalVelocity < -terminalVelocity)
+            verticalVelocity = -terminalVelocity;
     }
 }

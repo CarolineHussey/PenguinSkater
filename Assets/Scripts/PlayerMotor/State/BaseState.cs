@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public abstract class BaseState : MonoBehaviour
+public abstract class BaseState : MonoBehaviour //by making the script abstract, this class cannot exist on its own - it must be inherite before it can be used.  eg. see RunningState
 {
     protected PlayerMotor motor;
 
