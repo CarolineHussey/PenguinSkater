@@ -8,6 +8,7 @@ public class JumpingState : BaseState
     public override void Construct()
     {
         motor.verticalVelocity = jumpForce;
+        motor.anim?.SetTrigger("Jump");
     }
 
     public override Vector3 ProcessMotion()

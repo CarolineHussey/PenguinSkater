@@ -9,7 +9,7 @@ public class RunningState : BaseState
      public override Vector3 ProcessMotion()
     {
         Vector3 m = Vector3.zero;
-        m.x = 0; //no movement
+        m.x = 0.01f; //no movement
         m.y = -1.0f; // a small force to ensure the runner stays on the ground.
         m.z = motor.baseRunSpeed; //move at a certain speed - specified in baseRunSpeed.
         return m;
@@ -32,5 +32,9 @@ public class RunningState : BaseState
         if (!motor.isGrounded)
             motor.ChangeState(GetComponent<FallingState>());
 
+        if (InputManager.Instance.SwipeDown)
+        {
+            motor.ChangeState(GetComponent<SlidingState>());
+        }
     }
 }

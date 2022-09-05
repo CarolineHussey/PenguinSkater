@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a99af02c70f4ba046a3e0d7fd5a441b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chunkLength: 10
+  chunkLength: 20
 --- !u!1 &8738834856808634526
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,6 +358,14 @@ PrefabInstance:
     - target: {fileID: 794062787784958355, guid: f931c0cf94aa89c4c835bd4c992dd146, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536090451100665268, guid: f931c0cf94aa89c4c835bd4c992dd146, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.895
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536090451100665268, guid: f931c0cf94aa89c4c835bd4c992dd146, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.488
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f931c0cf94aa89c4c835bd4c992dd146, type: 3}

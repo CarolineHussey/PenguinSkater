@@ -6,7 +6,7 @@ using UnityEngine;
 //Go to Project Settings -> Script Execution Order and add 'InputManager' just below 'PlayerInput' to ensure that this script is called at the beginning of each frame.  
 public class InputManager : MonoBehaviour
 {
-    // ensure there is only one instance in the scene
+    // ensure there is only one instance in the scene 
     private static InputManager instance;   
     public static InputManager Instance {  get { return instance; } } //use get to ensure it can't be over-written by another script. instance can only be set by Self.
 
@@ -31,7 +31,7 @@ public class InputManager : MonoBehaviour
     #region privates
     private bool tap;
     private Vector2 touchPosition;
-    private Vector2 startDrag; //doesn't need a public value as it won;t be used outside of this script
+    private Vector2 startDrag; //doesn't need a public value as it won't be used outside of this script
     private bool swipeLeft;
     private bool swipeRight;
     private bool swipeUp;
@@ -44,6 +44,7 @@ public class InputManager : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(gameObject);
         SetupControl();
+        OnEnable();
     }
 
     private void LateUpdate()
@@ -58,7 +59,7 @@ public class InputManager : MonoBehaviour
 
     private void SetupControl()
     {
-       actionScheme = new RunnerInputAction();
+        actionScheme = new RunnerInputAction();
 
         //register different action to our functions
         actionScheme.Gameplay.Tap.performed += ctx => OnTap(ctx);
@@ -79,7 +80,7 @@ public class InputManager : MonoBehaviour
             float x = Mathf.Abs(delta.x);
             float y = Mathf.Abs(delta.y);
 
-            if (x>y) //if x > y, we are swiping left or right
+            if (x > y) //if x > y, we are swiping left or right
             {
                 if (delta.x > 0) //if x > 0, we are swiping right
                     swipeRight = true;
@@ -94,7 +95,7 @@ public class InputManager : MonoBehaviour
                     swipeDown = true;
             }
         }
-        startDrag = Vector2.zero; // value is reset to zero to set up for the next swipe.  the values for the other actions are reset duing LateUpdate by calling ResetInputs()
+        startDrag = Vector2.zero; // value is reset to zero to set up for the next swipe. the values for the other actions are reset duing LateUpdate by calling ResetInputs()
     }
 
     private void OnStartDrag(UnityEngine.InputSystem.InputAction.CallbackContext ctx)
