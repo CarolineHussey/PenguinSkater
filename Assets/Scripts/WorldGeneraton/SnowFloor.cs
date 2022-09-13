@@ -6,7 +6,7 @@ public class SnowFloor : MonoBehaviour
 {
     [SerializeField] private Transform player;
     [SerializeField] private Material material;
-    public float offsetSpeed = 0.25f;
+    public float offsetSpeed = 0.009f;
 
     private void Update()
     {
