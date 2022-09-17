@@ -5,6 +5,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance {  get { return instance; } }
     private static GameManager instance;
 
+    public PlayerMotor motor;
+
     private GameState state;
     private void Awake()
     {

@@ -93,4 +93,14 @@ public class PlayerMotor : MonoBehaviour
         if(verticalVelocity < -terminalVelocity)
             verticalVelocity = -terminalVelocity;
     }
+
+    public void PausePlayer()
+    {
+        isPaused = true;
+    }
+
+    public void ResumePlayer()
+    {
+        isPaused = false;
+    }
 }
