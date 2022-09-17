@@ -19,17 +19,20 @@ public class PlayerMotor : MonoBehaviour
     public Animator anim;
     private BaseState state;
 
+    private bool isPaused;
     private void Start()
     {
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
         state = GetComponent<RunningState>();
         state.Construct();
+        isPaused = true;
 
     }
     private void Update()
     {
-        UpdateMotor();
+        if (!isPaused)
+            UpdateMotor();
     }
     private void UpdateMotor()
     {
