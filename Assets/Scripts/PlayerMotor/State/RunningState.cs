@@ -9,7 +9,7 @@ public class RunningState : BaseState
      public override Vector3 ProcessMotion()
     {
         Vector3 m = Vector3.zero;
-        m.x = 0.01f; //no movement
+        m.x = motor.SnapToLane(); //no movement
         m.y = -1.0f; // a small force to ensure the runner stays on the ground.
         m.z = motor.baseRunSpeed; //move at a certain speed - specified in baseRunSpeed.
         return m;

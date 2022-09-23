@@ -708,6 +708,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slideDuraton: 1
+--- !u!114 &633229934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633229925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a14526783046831438c0a64bb457b9a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockbackForce: {x: 0, y: 5, z: -3}
+--- !u!114 &633229935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633229925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ae36b9ca1f254b47a5c4380cb17a6eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &773978167
 GameObject:
   m_ObjectHideFlags: 0
@@ -1204,6 +1229,7 @@ GameObject:
   - component: {fileID: 1868162123}
   - component: {fileID: 1868162125}
   - component: {fileID: 1868162126}
+  - component: {fileID: 1868162127}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1260,6 +1286,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e87c93e5928e6ac4c87313817950cb08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1868162127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868162122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830f26e39e3afab4e8d82f3f72d29fe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2034379091

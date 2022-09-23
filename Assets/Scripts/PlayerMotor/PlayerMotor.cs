@@ -103,4 +103,17 @@ public class PlayerMotor : MonoBehaviour
     {
         isPaused = false;
     }
+
+    public void RespawnPlayer()
+    {
+        //ChangeState(GetComponent<RespawnState>());
+        Debug.Log("Respawn");
+    }
+
+    public void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        string hitLayerName = LayerMask.LayerToName(hit.gameObject.layer); //LayerToName is a lookup function - it will lookup object at specified index, and returns the name associated with that index; hit.gameObject.layer is the int layer of the object that we are collding with
+        if(hitLayerName == "Death")
+            ChangeState(GetComponent<DeathState>());
+    }
 }
