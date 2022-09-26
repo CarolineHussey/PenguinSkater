@@ -106,7 +106,7 @@ public class PlayerMotor : MonoBehaviour
 
     public void RespawnPlayer()
     {
-        //ChangeState(GetComponent<RespawnState>());
+        ChangeState(GetComponent<RespawnState>());
         Debug.Log("Respawn");
     }
 

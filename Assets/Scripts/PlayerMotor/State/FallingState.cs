@@ -7,6 +7,7 @@ public class FallingState : BaseState
     public override void Construct()
     {
         motor.anim?.SetTrigger("Fall");
+        Debug.Log("Falling State True");
     }
     public override Vector3 ProcessMotion()
     {

@@ -2,7 +2,8 @@ public class GameStateGame : GameState
 {
     public override void Construct()
     {
+        base.Construct(); 
         GameManager.Instance.motor.ResumePlayer();
-        base.Construct();
+        GameManager.Instance.ChangeCamera(GameCamera.Init);
     }
 }
