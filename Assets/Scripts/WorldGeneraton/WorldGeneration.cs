@@ -20,8 +20,6 @@ public class WorldGeneration : MonoBehaviour
     [SerializeField] private List<GameObject> chunkPrefab;
     [SerializeField] private Transform cameraTransform;
 
-
-    //This awake function is for testing - will be deleted when the controls are set up later
     private void Awake()
     {
         ResetWorld();
@@ -42,13 +40,7 @@ public class WorldGeneration : MonoBehaviour
             Debug.Log("Camera transform assigned automatically to Camera.main");
         }
     }
-
-    private void Update()
-    {
-        ScanPosition();
-    }
-
-    private void ScanPosition()
+    public void ScanPosition()
     {
         float cameraZ = cameraTransform.position.z;
         Chunk lastChunk = activeChunks.Peek();
@@ -90,7 +82,7 @@ public class WorldGeneration : MonoBehaviour
         chunkPool.Add(chunk);
     }
 
-    private void ResetWorld()
+    public void ResetWorld()
     {
         //remove everything from the pool, Reset the chunkSpawnZ, reformat the world
 

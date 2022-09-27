@@ -116,4 +116,12 @@ public class PlayerMotor : MonoBehaviour
         if(hitLayerName == "Death")
             ChangeState(GetComponent<DeathState>());
     }
+    public void ResetPlayer()
+    {
+        currentLane = 0;
+        transform.position = Vector3.zero;
+        anim?.SetTrigger("Idle");
+        ChangeState(GameManager.Instance.motor.GetComponent<RunningState>());
+        PausePlayer();
+    }
 }
