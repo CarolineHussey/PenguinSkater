@@ -45,4 +45,8 @@ public class RespawnState : BaseState
             motor.ChangeLane(1);
         }
     }
+    public override void Destruct()
+    {
+        GameManager.Instance.ChangeCamera(GameCamera.Init);
+    }
 }

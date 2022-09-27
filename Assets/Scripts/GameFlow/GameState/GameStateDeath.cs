@@ -16,8 +16,8 @@ public class GameStateDeath : GameState
 
     private void ResumeGame()
     {
+        brain.ChangeState(GetComponent<GameStateGame>()); 
         GameManager.Instance.motor.RespawnPlayer();
-        brain.ChangeState(GetComponent<GameStateGame>());
     }
 
     public void ToMenu()
