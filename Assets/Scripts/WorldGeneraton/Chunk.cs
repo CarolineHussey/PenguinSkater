@@ -12,6 +12,7 @@ public class Chunk : MonoBehaviour
 
     public Chunk HideChunk()
     {
+        transform.gameObject.BroadcastMessage("OnShowChunk", SendMessageOptions.DontRequireReceiver);
         gameObject.SetActive(false);
         return this;
     }

@@ -24,6 +24,11 @@ public class Fish : MonoBehaviour
         //Increment Score
         //Play sfx
         //Trigger Animation
-        anim.SetTrigger("PickUp");
+        anim?.SetTrigger("PickUp");
+    }
+
+    public void OnShowChunk()
+    {
+        anim?.SetTrigger("Idle");
     }
 }
