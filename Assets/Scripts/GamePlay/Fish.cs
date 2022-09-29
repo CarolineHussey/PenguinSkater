@@ -20,7 +20,7 @@ public class Fish : MonoBehaviour
     private void PickUpFish()
     {
         //Increment FishCount
-
+        GameStat.Instance.CollectFish();
         //Increment Score
         //Play sfx
         //Trigger Animation

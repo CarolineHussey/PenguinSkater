@@ -14,13 +14,24 @@ public class GameStateGame : GameState
         GameManager.Instance.ChangeCamera(GameCamera.Init); 
         gameUI.SetActive(true);
 
-        fishCount.text = "TBD";
-        scoreCount.text = "TBD";
+        GameStat.Instance.OnCollectFish += OnCollectFish;
+        GameStat.Instance.OnScoreChange += OnScoreChange;
     }
 
+    public void OnCollectFish(int fishCollected)
+    {
+        fishCount.text = GameStat.Instance.FishToText();
+    }
+
+    public void OnScoreChange(float score)
+    {
+        scoreCount.text = GameStat.Instance.ScoreToText();
+    }
     public override void Destruct()
     {
         gameUI.SetActive(false);
+        GameStat.Instance.OnCollectFish -= OnCollectFish;
+        GameStat.Instance.OnScoreChange -= OnScoreChange;
     }
 
 

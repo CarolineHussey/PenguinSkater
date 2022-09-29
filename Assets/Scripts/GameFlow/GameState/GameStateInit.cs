@@ -25,6 +25,7 @@ public class GameStateInit : GameState
     public void OnPlayClick()
     {
         brain.ChangeState(GetComponent<GameStateGame>());
+        GameStat.Instance.ResetSession();
     }
 
     public void OnShopClick()
