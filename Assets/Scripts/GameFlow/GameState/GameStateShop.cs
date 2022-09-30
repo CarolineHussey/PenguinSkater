@@ -7,6 +7,7 @@ public class GameStateShop : GameState
 {
     public GameObject shopUI;
     public TextMeshProUGUI fishText;
+    public TextMeshProUGUI currentHat;
     public GameObject hatPrefab;
     public Transform hatContainer;
     private Hat[] hats;
@@ -32,13 +33,15 @@ public class GameStateShop : GameState
 
     private void PopulateShop()
     {
+        
         for (int i = 0; i < hats.Length; i++)
         {
+            int index = i;
             GameObject go = Instantiate(hatPrefab, hatContainer) as GameObject;
-            go.GetComponent<Button>().onClick.AddListener(() => OnHatClick(i));
-            go.transform.GetChild(1).GetComponent<Image>().sprite = hats[i].Thumbnail;
-            go.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = hats[i].ItemName;
-            go.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = hats[i].ItemPrice.ToString();
+            go.GetComponent<Button>().onClick.AddListener(() => OnHatClick(index));
+            go.transform.GetChild(1).GetComponent<Image>().sprite = hats[index].Thumbnail;
+            go.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = hats[index].ItemName;
+            go.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = hats[index].ItemPrice.ToString();
 
         }
     }
@@ -46,7 +49,9 @@ public class GameStateShop : GameState
     private void OnHatClick(int i)
     {
         Debug.Log("Hat Click! " + i);
+        currentHat.text = hats[i].ItemName;
     }
+
     public void OnHomeClick()
     {
         brain.ChangeState(GetComponent<GameStateInit>());
