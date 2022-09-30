@@ -4,7 +4,7 @@ public abstract class GameState : MonoBehaviour
 {
     protected GameManager brain;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         brain = GetComponent<GameManager>();
     }

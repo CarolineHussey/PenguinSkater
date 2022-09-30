@@ -8,12 +8,15 @@ public class GameStateShop : GameState
     public GameObject shopUI;
     public TextMeshProUGUI fishText;
     public TextMeshProUGUI currentHat;
+    public HatLogic hatLogic;
+
     public GameObject hatPrefab;
     public Transform hatContainer;
     private Hat[] hats;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         hats = Resources.LoadAll<Hat>("Hat");
         PopulateShop();
     }
@@ -48,8 +51,8 @@ public class GameStateShop : GameState
 
     private void OnHatClick(int i)
     {
-        Debug.Log("Hat Click! " + i);
         currentHat.text = hats[i].ItemName;
+        hatLogic.SelectHat(i);
     }
 
     public void OnHomeClick()
