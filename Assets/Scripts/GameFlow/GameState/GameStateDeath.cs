@@ -23,11 +23,24 @@ public class GameStateDeath : GameState
         deathUI.SetActive(true);
         circleTimer.gameObject.SetActive(true);
 
+        //Set high Score
+        if (SaveManager.Instance.save.HighScore < (int)GameStat.Instance.score) //HighScore is a float (calculated by distance) but SaveState saves ighscore as an int so Highscore is cast as an int here 
+        {
+            SaveManager.Instance.save.HighScore = (int)GameStat.Instance.score;
+            currentScore.color = Color.cyan;
+        }
+        else
+        {
+            currentScore.color = Color.white;
+        }
+        SaveManager.Instance.save.Fish += GameStat.Instance.currentFish;
+        SaveManager.Instance.Save();
+
         deathTime = Time.time;
-        highScore.text = "High Score: TBD";
-        currentScore.text = "TBD";
-        fishTotal.text = "Fish Total: TBD";
-        currentFish.text = "TBD";
+        highScore.text = "High Score: " + SaveManager.Instance.save.HighScore;
+        currentScore.text = GameStat.Instance.ScoreToText();
+        fishTotal.text = "Fish Total: " + SaveManager.Instance.save.Fish;
+        currentFish.text = GameStat.Instance.FishToText();
         
     }
 
@@ -61,7 +74,11 @@ public class GameStateDeath : GameState
     public void ToMenu()
     {
         brain.ChangeState(GetComponent<GameStateInit>());
+
         GameManager.Instance.motor.ResetPlayer();
         GameManager.Instance.worldGeneration.ResetWorld();
+        GameManager.Instance.sceneChunkGeneration.ResetWorld();
+
+
     }
 }

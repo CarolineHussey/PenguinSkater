@@ -10,8 +10,8 @@ public class GameStateInit : GameState
     public override void Construct()
     {
         GameManager.Instance.ChangeCamera(GameCamera.Game);
-        hiScoreText.text = "High Score: " + "TBD";
-        fishCountText.text = "Fish: " + "TBD";
+        hiScoreText.text = "High Score: " + SaveManager.Instance.save.HighScore.ToString();
+        fishCountText.text = "Fish: " + SaveManager.Instance.save.Fish.ToString();
 
         menuUI.SetActive(true);
 

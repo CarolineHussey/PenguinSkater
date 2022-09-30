@@ -20,6 +20,7 @@ public class SaveManager : MonoBehaviour
 
     private void Awake()
     {
+        instance = this;
         formatter = new BinaryFormatter();
         Load();
     }
@@ -28,7 +29,7 @@ public class SaveManager : MonoBehaviour
     {
         try
         {
-            FileStream file = new FileStream(saveFileName, FileMode.Open, FileAccess.Read);
+            FileStream file = new FileStream(Application.persistentDataPath + saveFileName, FileMode.Open, FileAccess.Read);
             save = formatter.Deserialize(file) as SaveState;//deserialize
             file.Close();
             OnLoad?.Invoke(save);
@@ -50,7 +51,7 @@ public class SaveManager : MonoBehaviour
         save.LastSaveTime = DateTime.Now; 
         
         //Open a file on our system & write to it
-        FileStream file = new FileStream(saveFileName, FileMode.OpenOrCreate, FileAccess.Write);
+        FileStream file = new FileStream(Application.persistentDataPath + saveFileName, FileMode.OpenOrCreate, FileAccess.Write);
         formatter.Serialize(file, save);
         file.Close();
 
