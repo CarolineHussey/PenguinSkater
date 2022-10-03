@@ -14,7 +14,7 @@ public class GameStat : MonoBehaviour
     //fish
     public int totalFish;
     public int currentFish;
-    public float points = 10.0f;
+    public float points = 0.0f;
 
     //Internal cooldown
     private float lastScoreUpdate;
