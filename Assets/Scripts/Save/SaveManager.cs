@@ -10,7 +10,7 @@ public class SaveManager : MonoBehaviour
 
     //Fields
     public SaveState save;
-    private const string saveFileName = "SaveState.ss";
+    private const string saveFileName = "/SaveState.ss";
     private BinaryFormatter formatter;
 
     //Actions
@@ -30,7 +30,7 @@ public class SaveManager : MonoBehaviour
         try
         {
             FileStream file = new FileStream(Application.persistentDataPath + saveFileName, FileMode.Open, FileAccess.Read);
-            save = formatter.Deserialize(file) as SaveState;//deserialize
+            save = (SaveState)formatter.Deserialize(file);//deserialize
             file.Close();
             OnLoad?.Invoke(save);
         }
