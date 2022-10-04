@@ -11,10 +11,16 @@ public class AdManager : MonoBehaviour
     //config fields
     [SerializeField] private string gameID;
     [SerializeField] private string rewardVideoPlacementID; //flags that the user will be rewarded for watching a video
+    [SerializeField] private bool testMode;
 
     private void Awake()
     {
         instance = this;
-        Advertisement.Initialize(gameID, true);
+        Advertisement.Initialize(gameID, testMode);
+    }
+    public void ShowRewardedAd() 
+    {
+        ShowOptions so = new ShowOptions();
+        Advertisement.Show(rewardVideoPlacementID, so);
     }
 }

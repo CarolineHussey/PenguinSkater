@@ -2537,7 +2537,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 733328011}
-  m_LocalRotation: {x: 0.20010382, y: -0.0132486615, z: 0.0027060914, w: 0.97968143}
+  m_LocalRotation: {x: 0.20010382, y: -0.013248628, z: 0.0027060849, w: 0.97968143}
   m_LocalPosition: {x: 0.13523196, y: 4.69, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3569,7 +3569,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1868162127}
         m_TargetAssemblyTypeName: GameStateDeath, Assembly-CSharp
-        m_MethodName: ResumeGame
+        m_MethodName: TryResumeGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5498,6 +5498,7 @@ GameObject:
   - component: {fileID: 1868162128}
   - component: {fileID: 1868162129}
   - component: {fileID: 1868162130}
+  - component: {fileID: 1868162131}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -5636,6 +5637,21 @@ MonoBehaviour:
   hatLogic: {fileID: 633229936}
   hatPrefab: {fileID: 7457636127183820437, guid: 26becfc61d8d94b4e9a5944fe5831d17, type: 3}
   hatContainer: {fileID: 1049848118}
+--- !u!114 &1868162131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868162122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 915be2b8818392a46922715bce8f6cf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameID: 4955656
+  rewardVideoPlacementID: Rewarded_Android
+  testMode: 0
 --- !u!1 &1931558796
 GameObject:
   m_ObjectHideFlags: 0

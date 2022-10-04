@@ -26,6 +26,7 @@ public class GameStateInit : GameState
     {
         brain.ChangeState(GetComponent<GameStateGame>());
         GameStat.Instance.ResetSession();
+        GetComponent<GameStateDeath>().EnableRevive();
     }
 
     public void OnShopClick()

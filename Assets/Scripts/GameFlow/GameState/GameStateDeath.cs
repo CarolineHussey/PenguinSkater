@@ -1,9 +1,9 @@
-using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Advertisements;
 
-public class GameStateDeath : GameState
+public class GameStateDeath : GameState, IUnityAdsListener
 {
     public GameObject deathUI;
     [SerializeField] private TextMeshProUGUI highScore;
@@ -16,12 +16,16 @@ public class GameStateDeath : GameState
     [SerializeField] private Image circleTimer;
     public float timeToDecision = 2.5f;
     private float deathTime;
+
+    private void Start()
+    {
+        Advertisement.AddListener(this);
+    }
     public override void Construct()
     {
         Debug.Log("GameStateDeath");
         GameManager.Instance.motor.PausePlayer();
         deathUI.SetActive(true);
-        circleTimer.gameObject.SetActive(true);
 
         //Set high Score
         if (SaveManager.Instance.save.HighScore < (int)GameStat.Instance.score) //HighScore is a float (calculated by distance) but SaveState saves ighscore as an int so Highscore is cast as an int here 
@@ -65,6 +69,10 @@ public class GameStateDeath : GameState
         //    ResumeGame();
     }
 
+    public void TryResumeGame() 
+    {
+        AdManager.Instance.ShowRewardedAd();
+    }
     public void ResumeGame()
     {
         brain.ChangeState(GetComponent<GameStateGame>()); 
@@ -80,5 +88,37 @@ public class GameStateDeath : GameState
         GameManager.Instance.sceneChunkGeneration.ResetWorld();
 
 
+    }
+
+    public void EnableRevive()
+    {
+        circleTimer.gameObject.SetActive(true);
+    }
+    public void OnUnityAdsReady(string placementID)
+    {
+        
+    }
+    public void OnUnityAdsDidError(string message)
+    {
+        
+    }
+    public void OnUnityAdsDidStart(string placementID)
+    {
+        
+    }
+    public void OnUnityAdsDidFinish(string placementID, ShowResult showResult)
+    {
+        circleTimer.gameObject.SetActive(false);
+        switch (showResult)
+        {
+            case ShowResult.Failed:
+                ToMenu();
+                break;
+            case ShowResult.Finished:
+                ResumeGame();
+                break;
+            default:
+                break;
+        }
     }
 }
