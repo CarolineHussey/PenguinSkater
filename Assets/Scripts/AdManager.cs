@@ -16,7 +16,7 @@ public class AdManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        Advertisement.Initialize(gameID, testMode);
+        Advertisement.Initialize(gameID, !testMode);
     }
     public void ShowRewardedAd() 
     {
