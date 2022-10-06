@@ -4,7 +4,7 @@ using UnityEngine;
 [System.Serializable]
 public class SaveState
 {
-    [NonSerialized] private const int HAT_COUNT = 31;
+    [NonSerialized] private const int HAT_COUNT = 32;
     public int HighScore { set; get; }
     public int Fish { set; get; }
     public DateTime LastSaveTime { set; get; }

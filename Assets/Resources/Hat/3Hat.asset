@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: 3Hat
   m_EditorClassIdentifier: 
   ItemName: Antlers
-  ItemPrice: 5
+  ItemPrice: 10
   Thumbnail: {fileID: 21300000, guid: cba15b3a2533ec84990ffc42bf62cbcf, type: 3}
-  Model: {fileID: 100000, guid: a41b2b28d2c370148b5fcb7cb91b34a4, type: 3}
+  Model: {fileID: 6266626757624118979, guid: cf3d90d0cc0e70b4581826ed711efd73, type: 3}

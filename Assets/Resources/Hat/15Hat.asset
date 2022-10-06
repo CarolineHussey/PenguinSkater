@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 977cf0186a642bf44a4cefc73e011394, type: 3}
+  m_Name: 15Hat
+  m_EditorClassIdentifier: 
+  ItemName: Antlers
+  ItemPrice: 12
+  Thumbnail: {fileID: 21300000, guid: cba15b3a2533ec84990ffc42bf62cbcf, type: 3}
+  Model: {fileID: 6266626757624118979, guid: cf3d90d0cc0e70b4581826ed711efd73, type: 3}
