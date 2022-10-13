@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 977cf0186a642bf44a4cefc73e011394, type: 3}
-  m_Name: 8Hat
+  m_Name: 03Hat
   m_EditorClassIdentifier: 
-  ItemName: Roman Helmet
-  ItemPrice: 25
-  Thumbnail: {fileID: 21300000, guid: 2bf3a2ed47747104294b9fa171d6ff4d, type: 3}
-  Model: {fileID: 3821534820577867459, guid: 66c21e1e8b83d8742916495e56ec88c9, type: 3}
+  ItemName: Antlers
+  ItemPrice: 7
+  Thumbnail: {fileID: 21300000, guid: cba15b3a2533ec84990ffc42bf62cbcf, type: 3}
+  Model: {fileID: 6266626757624118979, guid: cf3d90d0cc0e70b4581826ed711efd73, type: 3}

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 977cf0186a642bf44a4cefc73e011394, type: 3}
-  m_Name: 7Hat
+  m_Name: 02Hat
   m_EditorClassIdentifier: 
-  ItemName: Executioner's Hood
-  ItemPrice: 21
-  Thumbnail: {fileID: 21300000, guid: f7824cad71c49984cb17c57196a18eaa, type: 3}
-  Model: {fileID: 6074962645744229187, guid: 958cd001332325f4790b4b3c5538d895, type: 3}
+  ItemName: Flower Crown
+  ItemPrice: 4
+  Thumbnail: {fileID: 21300000, guid: 75d36feda45a3734aa2c9aa0f007a19a, type: 3}
+  Model: {fileID: 2006354974929511435, guid: 8f1dc32055c85924c9d72cf25c84e524, type: 3}
