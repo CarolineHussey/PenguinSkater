@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 977cf0186a642bf44a4cefc73e011394, type: 3}
   m_Name: 27Hat
   m_EditorClassIdentifier: 
-  ItemName: Antlers
-  ItemPrice: 240
-  Thumbnail: {fileID: 21300000, guid: cba15b3a2533ec84990ffc42bf62cbcf, type: 3}
-  Model: {fileID: 6266626757624118979, guid: cf3d90d0cc0e70b4581826ed711efd73, type: 3}
+  ItemName: Tiara
+  ItemPrice: 160
+  Thumbnail: {fileID: 21300000, guid: 42ce733426bf252489289a133a6f5147, type: 3}
+  Model: {fileID: 5878085695711375028, guid: b5fc93a6a53eac34ba0e3314ceeea240, type: 3}

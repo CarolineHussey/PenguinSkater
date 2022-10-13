@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 977cf0186a642bf44a4cefc73e011394, type: 3}
   m_Name: 16Hat
   m_EditorClassIdentifier: 
-  ItemName: No Hat
-  ItemPrice: 130
-  Thumbnail: {fileID: 21300000, guid: e312519bd325cea44add0f9a4720222d, type: 3}
-  Model: {fileID: 592186782968975713, guid: 7197a36585aa85749b2d8f19788817a5, type: 3}
+  ItemName: Leather Cap
+  ItemPrice: 71
+  Thumbnail: {fileID: 21300000, guid: 2389d9b69597ce5438a8c144db6aa1be, type: 3}
+  Model: {fileID: 2882962982029492367, guid: 5bc6e4374d9a82a43b0f88b713ff8706, type: 3}

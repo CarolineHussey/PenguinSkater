@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 977cf0186a642bf44a4cefc73e011394, type: 3}
   m_Name: 14Hat
   m_EditorClassIdentifier: 
-  ItemName: Flower Crown
-  ItemPrice: 110
-  Thumbnail: {fileID: 21300000, guid: 75d36feda45a3734aa2c9aa0f007a19a, type: 3}
-  Model: {fileID: 592186782968975713, guid: 7197a36585aa85749b2d8f19788817a5, type: 3}
+  ItemName: Golden Helmet
+  ItemPrice: 58
+  Thumbnail: {fileID: 21300000, guid: abdfe18d6d27bfc48a6fd48dc99aca87, type: 3}
+  Model: {fileID: 4232968962515209292, guid: eed49f9262913914db4a78de387d62f6, type: 3}

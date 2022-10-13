@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 977cf0186a642bf44a4cefc73e011394, type: 3}
   m_Name: 25Hat
   m_EditorClassIdentifier: 
-  ItemName: Diving Helmet
-  ItemPrice: 220
-  Thumbnail: {fileID: 21300000, guid: c4000db35fc1c524d943da04b93a4eb0, type: 3}
-  Model: {fileID: 193415524112997362, guid: 551257e9f0307514fb8fa29901d78e71, type: 3}
+  ItemName: Small Horned Helmet
+  ItemPrice: 142
+  Thumbnail: {fileID: 21300000, guid: 50d2eee8366dd9c4d82d7218845ce7d0, type: 3}
+  Model: {fileID: 9125591498178997100, guid: c43fc93258bc23b478b134dbc752b7ae, type: 3}

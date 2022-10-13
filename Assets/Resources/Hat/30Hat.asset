@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 977cf0186a642bf44a4cefc73e011394, type: 3}
   m_Name: 30Hat
   m_EditorClassIdentifier: 
-  ItemName: Flower Crown
-  ItemPrice: 270
-  Thumbnail: {fileID: 21300000, guid: 75d36feda45a3734aa2c9aa0f007a19a, type: 3}
-  Model: {fileID: 592186782968975713, guid: 7197a36585aa85749b2d8f19788817a5, type: 3}
+  ItemName: Winged Helmet
+  ItemPrice: 190
+  Thumbnail: {fileID: 21300000, guid: ab51fda8d3530b04ab755b75339afdd7, type: 3}
+  Model: {fileID: 8406442927593668957, guid: bd29b13310b955b4789b1b9682fc609b, type: 3}

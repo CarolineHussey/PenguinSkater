@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: 5Hat
   m_EditorClassIdentifier: 
   ItemName: Crown
-  ItemPrice: 20
+  ItemPrice: 13
   Thumbnail: {fileID: 21300000, guid: 7cd7b8898662db648970105ea53d8cf0, type: 3}
   Model: {fileID: 4100811732926896676, guid: 59d057a2ce6d92041a5383ef48db3e47, type: 3}

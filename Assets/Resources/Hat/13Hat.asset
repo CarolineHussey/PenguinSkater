@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 977cf0186a642bf44a4cefc73e011394, type: 3}
   m_Name: 13Hat
   m_EditorClassIdentifier: 
-  ItemName: Diving Helmet
-  ItemPrice: 100
-  Thumbnail: {fileID: 21300000, guid: c4000db35fc1c524d943da04b93a4eb0, type: 3}
-  Model: {fileID: 193415524112997362, guid: 551257e9f0307514fb8fa29901d78e71, type: 3}
+  ItemName: Knight Helmet
+  ItemPrice: 52
+  Thumbnail: {fileID: 21300000, guid: 1dc124c4866966e47ba20ce88d0b208e, type: 3}
+  Model: {fileID: 4383852455535203222, guid: e737bf545724e0f469083a7576476605, type: 3}

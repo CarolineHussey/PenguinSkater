@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 977cf0186a642bf44a4cefc73e011394, type: 3}
   m_Name: 8Hat
   m_EditorClassIdentifier: 
-  ItemName: No Hat
-  ItemPrice: 50
-  Thumbnail: {fileID: 21300000, guid: e312519bd325cea44add0f9a4720222d, type: 3}
-  Model: {fileID: 592186782968975713, guid: 7197a36585aa85749b2d8f19788817a5, type: 3}
+  ItemName: Roman Helmet
+  ItemPrice: 25
+  Thumbnail: {fileID: 21300000, guid: 2bf3a2ed47747104294b9fa171d6ff4d, type: 3}
+  Model: {fileID: 3821534820577867459, guid: 66c21e1e8b83d8742916495e56ec88c9, type: 3}

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: 6Hat
   m_EditorClassIdentifier: 
   ItemName: Devil Horns
-  ItemPrice: 30
+  ItemPrice: 17
   Thumbnail: {fileID: 21300000, guid: 0001e3c4670c77b4ab883a85791333da, type: 3}
   Model: {fileID: 2716691153547181492, guid: 2c81868684b48fb4eb2865ca005e6cc9, type: 3}

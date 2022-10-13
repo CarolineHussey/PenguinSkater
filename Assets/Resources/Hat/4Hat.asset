@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 977cf0186a642bf44a4cefc73e011394, type: 3}
   m_Name: 4Hat
   m_EditorClassIdentifier: 
-  ItemName: Big Horn hat
-  ItemPrice: 15
+  ItemName: Big Horned Hat
+  ItemPrice: 10
   Thumbnail: {fileID: 21300000, guid: 4d83ad9ff812f744793e6eb8f83c2f9b, type: 3}
   Model: {fileID: 8833321222051975688, guid: 1c5695b5e0d2539438b5ac119a118aea, type: 3}

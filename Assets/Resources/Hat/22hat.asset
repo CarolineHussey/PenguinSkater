@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 977cf0186a642bf44a4cefc73e011394, type: 3}
   m_Name: 22hat
   m_EditorClassIdentifier: 
-  ItemName: Flower Crown
-  ItemPrice: 190
-  Thumbnail: {fileID: 21300000, guid: 75d36feda45a3734aa2c9aa0f007a19a, type: 3}
-  Model: {fileID: 592186782968975713, guid: 7197a36585aa85749b2d8f19788817a5, type: 3}
+  ItemName: Robin Hood
+  ItemPrice: 116
+  Thumbnail: {fileID: 21300000, guid: 68e1601074d079a4a8d3ff022a7154c7, type: 3}
+  Model: {fileID: 8414516559758452901, guid: 5f2fb1c7583b68346ba28690eb43c7fd, type: 3}

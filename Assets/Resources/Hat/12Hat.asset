@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 977cf0186a642bf44a4cefc73e011394, type: 3}
   m_Name: 12Hat
   m_EditorClassIdentifier: 
-  ItemName: No Hat
-  ItemPrice: 90
-  Thumbnail: {fileID: 21300000, guid: e312519bd325cea44add0f9a4720222d, type: 3}
-  Model: {fileID: 592186782968975713, guid: 7197a36585aa85749b2d8f19788817a5, type: 3}
+  ItemName: Kettle Hat
+  ItemPrice: 46
+  Thumbnail: {fileID: 21300000, guid: f0b74d6f4ef58e2438a9cd59dc77297e, type: 3}
+  Model: {fileID: 529464276362081325, guid: b3bef1bf92fe0fa4fb87855f3427e3c5, type: 3}

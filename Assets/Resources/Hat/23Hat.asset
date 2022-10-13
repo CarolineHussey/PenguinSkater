@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 977cf0186a642bf44a4cefc73e011394, type: 3}
   m_Name: 23Hat
   m_EditorClassIdentifier: 
-  ItemName: Antlers
-  ItemPrice: 200
-  Thumbnail: {fileID: 21300000, guid: cba15b3a2533ec84990ffc42bf62cbcf, type: 3}
-  Model: {fileID: 6266626757624118979, guid: cf3d90d0cc0e70b4581826ed711efd73, type: 3}
+  ItemName: Russian Hat
+  ItemPrice: 124
+  Thumbnail: {fileID: 21300000, guid: f0be5045470eb2e42a99d649a5428c3e, type: 3}
+  Model: {fileID: 4965557734610871511, guid: 7c4546900f283124988ba9b61ba2b2e9, type: 3}

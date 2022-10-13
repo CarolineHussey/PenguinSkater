@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 977cf0186a642bf44a4cefc73e011394, type: 3}
   m_Name: 28Hat
   m_EditorClassIdentifier: 
-  ItemName: No Hat
-  ItemPrice: 250
-  Thumbnail: {fileID: 21300000, guid: e312519bd325cea44add0f9a4720222d, type: 3}
-  Model: {fileID: 592186782968975713, guid: 7197a36585aa85749b2d8f19788817a5, type: 3}
+  ItemName: Turban
+  ItemPrice: 170
+  Thumbnail: {fileID: 21300000, guid: aa1b6966bfa5e864584132185b17e18e, type: 3}
+  Model: {fileID: 6068395468209659361, guid: ee467e1dcffe2ae4c9785d25682b1ac2, type: 3}
