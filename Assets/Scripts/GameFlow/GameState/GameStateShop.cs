@@ -21,10 +21,11 @@ public class GameStateShop : GameState
         GameManager.Instance.ChangeCamera(GameCamera.Shop);
         hats = Resources.LoadAll<Hat>("Hat");
         shopUI.SetActive(true);
+        fishText.text = SaveManager.Instance.save.Fish.ToString("00000");
 
         if (!shopInit)
         {
-            fishText.text = SaveManager.Instance.save.Fish.ToString("00000");
+            
             currentHat.text = hats[SaveManager.Instance.save.CurrentHatIndex].ItemName;
             PopulateShop();
             shopInit = true;
