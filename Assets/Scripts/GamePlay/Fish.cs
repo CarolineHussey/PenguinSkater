@@ -20,11 +20,12 @@ public class Fish : MonoBehaviour
     private void PickUpFish()
     {
         //Increment FishCount
+        anim?.SetTrigger("PickUp"); 
         GameStat.Instance.CollectFish();
         //Increment Score
         //Play sfx
         //Trigger Animation
-        anim?.SetTrigger("PickUp");
+        
     }
 
     public void OnShowChunk()
