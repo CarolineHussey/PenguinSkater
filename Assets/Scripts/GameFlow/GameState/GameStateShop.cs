@@ -2,6 +2,7 @@ using UnityEditor;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Reflection;
 
 public class GameStateShop : GameState
 {
@@ -10,11 +11,17 @@ public class GameStateShop : GameState
     public TextMeshProUGUI currentHat;
     public HatLogic hatLogic;
     private bool shopInit = false;
+    private int hatCount;
+    private int unlockedHatCount;
+    private int currentUnlockedCount;
 
     public GameObject hatPrefab;
     public Transform hatContainer;
     private Hat[] hats;
 
+    // Completion Circle
+    public Image completionCircle;
+    public TextMeshProUGUI completionText;
 
     public override void Construct()
     {
@@ -30,6 +37,8 @@ public class GameStateShop : GameState
             PopulateShop();
             shopInit = true;
         }
+
+        ResetCompletionCircle();
     }
 
     public override void Destruct() 
@@ -50,8 +59,10 @@ public class GameStateShop : GameState
             if (SaveManager.Instance.save.UnlockedHatFlag[i] == 0)
                 go.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = "Fish: " + hats[index].ItemPrice.ToString();
             else
+            {
                 go.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = "";
-
+                unlockedHatCount++;
+            }
         }
     }
 
@@ -74,11 +85,22 @@ public class GameStateShop : GameState
             fishText.text = SaveManager.Instance.save.Fish.ToString("00000");
             hatContainer.GetChild(i).transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = "";
             SaveManager.Instance.Save();
+            unlockedHatCount++;
+            ResetCompletionCircle();
         }
         else
         {
             Debug.Log("Not enough fish");
         }
+    }
+
+    private void ResetCompletionCircle()
+    {
+        int hatCount = hats.Length - 1;
+        int currentUnlockedCount = unlockedHatCount - 1;
+        
+        completionCircle.fillAmount = (float)currentUnlockedCount / (float)hatCount;
+        completionText.text = currentUnlockedCount + "/" + hatCount;
     }
 
     public void OnHomeClick()
