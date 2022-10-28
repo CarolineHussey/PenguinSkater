@@ -5,6 +5,7 @@ public class GameStat : MonoBehaviour
 {
     public static GameStat Instance { get { return instance; } }
     private static GameStat instance;
+    public AudioClip fishCollectSFX;
 
     //Scores
     public float score;
@@ -51,6 +52,7 @@ public class GameStat : MonoBehaviour
     {
         currentFish++;
         OnCollectFish?.Invoke(currentFish);
+        AudioManager.Instance.PlaySFX(fishCollectSFX, 0.2f);
     }
 
     public void ResetSession()

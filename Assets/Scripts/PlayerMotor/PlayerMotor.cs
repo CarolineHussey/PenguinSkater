@@ -17,6 +17,8 @@ public class PlayerMotor : MonoBehaviour
 
     public CharacterController controller;
     public Animator anim;
+    public AudioClip deathSFX;
+
     private BaseState state;
 
     private bool isPaused;
@@ -114,7 +116,11 @@ public class PlayerMotor : MonoBehaviour
     {
         string hitLayerName = LayerMask.LayerToName(hit.gameObject.layer); //LayerToName is a lookup function - it will lookup object at specified index, and returns the name associated with that index; hit.gameObject.layer is the int layer of the object that we are collding with
         if(hitLayerName == "Death")
+        {
             ChangeState(GetComponent<DeathState>());
+            AudioManager.Instance.PlaySFX(deathSFX, 0.5f);
+        }
+            
     }
     public void ResetPlayer()
     {

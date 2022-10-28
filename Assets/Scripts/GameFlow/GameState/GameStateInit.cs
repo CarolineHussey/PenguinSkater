@@ -6,6 +6,7 @@ public class GameStateInit : GameState
     public GameObject menuUI;
     [SerializeField] private TextMeshProUGUI hiScoreText;
     [SerializeField] private TextMeshProUGUI fishCountText;
+    [SerializeField] private AudioClip menuLoopMusic;
 
     public override void Construct()
     {
@@ -14,6 +15,8 @@ public class GameStateInit : GameState
         fishCountText.text = "Fish: " + SaveManager.Instance.save.Fish.ToString();
 
         menuUI.SetActive(true);
+
+        AudioManager.Instance.PlayMusicWithXFade(menuLoopMusic, 0.5f);
 
     }
 
