@@ -3204,7 +3204,7 @@ MonoBehaviour:
   terminalVelocity: 20
   controller: {fileID: 0}
   anim: {fileID: 0}
-  deathSFX: {fileID: 8300000, guid: add1513ddace9b74692cce6ee897cdee, type: 3}
+  deathSFX: {fileID: 8300000, guid: e9b4cea5baad723478d53c7b3f9f892e, type: 3}
 --- !u!4 &633229930 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400068, guid: 095f379f461e4554c8999ccdc9f2e131, type: 3}
@@ -6727,6 +6727,7 @@ MonoBehaviour:
   - {fileID: 2859709637557106482, guid: 78e34ea362359d24e88f0a03919ba88e, type: 3}
   - {fileID: 869556194605277125, guid: 01ca4e1e6718623468ed02c8249e3b30, type: 3}
   - {fileID: 2638149471059530508, guid: 85e1655c8c6c70d48b11935bf945c53c, type: 3}
+  - {fileID: 6382153275562554152, guid: f8569ff1b1967f14dbb65a2b0bf0cdd4, type: 3}
   cameraTransform: {fileID: 1782531092}
 --- !u!4 &1578979448
 Transform:
@@ -8190,7 +8191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36e1a4123df78e841bdc3ddcfc61ba64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishCollectSFX: {fileID: 8300000, guid: 24b7d046d639306498d07c733d89c981, type: 3}
+  fishCollectSFX: {fileID: 8300000, guid: dd034694b1b9d4c46821a5cd4d46501a, type: 3}
   score: 0
   highScore: 0
   distanceModifier: 1.5
