@@ -6761,6 +6761,9 @@ MonoBehaviour:
   chunkPrefab:
   - {fileID: 7332469731915148742, guid: c6a93ea28bfe1cb4696d4eaf94dea99c, type: 3}
   - {fileID: 1054849020761527648, guid: 68998f18d41e2c341b1a6081e7979b98, type: 3}
+  - {fileID: 3363330067135665128, guid: e401e3f7e83212e469463e9e967d0d14, type: 3}
+  - {fileID: 8827213988593455323, guid: 6b85c6cb24f7562488a3522fb992479c, type: 3}
+  - {fileID: 1414567844366950914, guid: 41967edd426873e49a7e4202569edaed, type: 3}
   cameraTransform: {fileID: 1782531092}
 --- !u!4 &1582500254 stripped
 Transform:
