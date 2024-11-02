@@ -1,5 +1,5 @@
 # PenguinSkater
- A game developed for Andriod devvices.
+ A game developed for Andriod devices.
 
  Developed with Unity version 2020.3.40f1 and C#. APK available on request.
 
